@@ -1,0 +1,26 @@
+#
+#Created by: Wendi Yu
+#Created on: Feb-13-2019
+#
+#This is a string blow up
+
+#user input the string
+str = input("Please, enter a string that you would like to analyze: ")
+
+result = []
+
+for character, char in enumerate(str[:-1]):
+
+#if each character in the string is a number. if so, copy the number associate with that character as many times as it require 
+    if char.isdigit():
+      StringValue = int(char) 
+      result.append(StringValue * str[character + 1])
+#if each character in the string is a letter, then print out each character  
+    else:
+      result.append(char)
+
+#if last character in string is a letter then leave it as what it is
+if not str[-1]. isdigit():
+  result.append(str[-1])
+
+print(''.join(result))
